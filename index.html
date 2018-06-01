@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	<script src="js/jquery-3.3.1.js"></script>
+
+</head>
+<body>
+	<!--页面导航-->
+	<section id="header">
+		<div class="logo">
+			<img src="images/header.png">
+		<nav>
+			<ul>
+				<li><a href="#header">首页</a></li>
+				<li><a href="#content">金牌服务</a></li>
+				<li><a href="">关于公司</a></li>
+				<li><a href="">优秀案例</a></li>
+				<li><a href="">招聘信息</a></li>
+				<li><a href="">公司地址</a></li>
+			</ul>
+		</nav>
+	</div>
+	</section>	
+
+	<!--轮播图-->
+	<div class="banner" id="banner">
+			<a href="">
+				<div class="banner-slide slide1 slide-active"></div>
+			</a>
+			<a href="">
+				<div class="banner-slide slide2"></div>
+			</a>
+			<a href="">
+				<div class="banner-slide slide3"></div>
+			</a>
+		</div>
+		<a href="javascript:void(0)" class="button prev" id="prev"></a>
+		<a href="javascript:void(0)" class="button next" id="next"></a>
+		<div class="dots" id="dots">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+		</div>
+
+	
+	<section id="content">
+		<div class="service">
+			<div class="titles "><img src="images/service.png"></div>
+			<div class="contentS">
+				<ul>
+					<li class="s1"><img src="images/s1.png" ></li>
+					<li class="s2"><img src="images/s6.png"></li>
+					<li class="s3"><img src="images/s3.png"></li>
+					<li class="s4"><img src="images/s4.png"></li>
+					<li class="s5"><img src="images/s5.png"></li>
+					<li class="s6"><img src="images/s6.png"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="about">
+			<div class="titlea "><img src="images/about.png"></div>
+			<div class="contentA">
+				<img src="images/a1.jpg">
+				<div class="ARight"><h2>关于公司</h2><h3>为什么选择直行?</h3><p>广州直行网络是一家提供互联网服务的高科技集团公司，集策划、设计、前端优化、研发、测试、系统运维、网站推广、运营、团队外包及互联网人才培养为一体的成熟业务体系；主要提供高品质网站建设方案，移动端应用开发方案，微应用、微商城、微官网、微互动营销解决方案，企业信息化解决方案，以及PHP网站开发、Java开发、UI设计、淘宝美工人才培养服务，人才外包服务高端IT人才猎头服务。</p></div>
+			</div>
+		</div>
+		<div class="case">
+			<div class="titlec "><img src="images/case.png"></div>
+			<div class="contentT">
+				<ul>
+					<li class="t1"><img src="images/t1.png" ></li>
+					<li class="t2"><img src="images/t2.png"></li>
+					<li class="t3"><img src="images/t3.png"></li>
+					<li class="t4"><img src="images/t4.png"></li>
+					<li class="t5"><img src="images/t5.png"></li>
+					<li class="t6"><img src="images/t6.png"></li>
+					<li class="t7"><img src="images/t7.png"></li>
+					<li class="t8"><img src="images/t8.png"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="information">
+			<div class="titlei "><img src="images/information.png"></div>
+			<div class="contentI">
+				<ul>
+					<li>PHP高级工程师</li>
+					<li>网页设计师</li>
+					<li>HTML5前段开发工程师</li>
+					<li>项目架构师</li>
+					<li>美术指导</li>
+					<li>APP开发工程师</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="adress">
+			<div class="titlea "><img src="images/adress.png"></div>
+			<div  id="dituContent"></div>
+		</div>
+		
+	<section id="footer">
+		<div class="foot-nav">
+			<ul>
+				<li><a href="">首页</a></li>
+				<li><a href="">金牌服务</a></li>
+				<li><a href="">关于公司</a></li>
+				<li><a href="">优秀案例</a></li>
+				<li><a href="">招聘信息</a></li>
+				<li><a href="">公司地址</a></li>
+			</ul>
+		</div>
+	</section>
+	</section>
+
+
+
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.308026,23.225397);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_SMALL});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:0});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"我的标记",content:"我的备注",point:"113.307811|23.224808",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</body>
+</html>

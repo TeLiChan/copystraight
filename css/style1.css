@@ -1,0 +1,200 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*页面导航*/
+#header{
+	position: fixed;
+	width: 100%;
+	height: 109px;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	z-index: 999;
+
+}
+
+.logo{
+	width: 984px;
+	margin: 0 auto;
+}
+
+.logo img{
+	margin-top: 27px;
+	
+}
+
+.logo nav{
+	float: right;
+	
+}
+
+.logo li{
+	list-style:none;	
+	float: left;
+	line-height: 109px;
+	width: 90px;
+}
+
+#banner{
+	padding-top: 80px;
+}
+
+#logo{
+	position: absolute;
+	top:1009px;
+
+}
+#content{
+	padding-top: 120px;
+	width: 1044px;
+	margin: 0 auto;
+}
+
+.titles{
+	width:283px;
+	height: 86px;
+	margin: 0 auto;
+}
+.titlea{
+	width: 215px;
+	height: 86px;
+	margin: 0 auto;
+}
+.titlec{
+	width: 378px;
+	height: 86px;
+	margin: 0 auto;
+}
+.titlei{
+	width: 656px;
+	height: 86px;
+	margin: 0 auto;
+}
+
+/*金牌服务*/
+.contentS{
+	padding-top: 50px;
+	width: 1044px;
+	height: 420px;
+	margin: 0 auto;
+}
+
+
+.contentS li{
+	width: 328px;
+	height: 204px;
+	float: left;
+	background-color: #E0EEE0;
+	margin: 10px;
+}
+
+.contentS  li img{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.about{
+	padding-top: 70px;
+}
+
+.contentA{
+	width: 100%;
+	padding-top: 50px;
+	height: 322px;
+}
+
+.contentA img{
+	float: left;
+	max-width:100%;
+    height: auto;
+    max-width: 100%; 
+    display: block;
+    padding-left: 50px;
+
+}
+
+.ARight{
+	width: 500px;
+	height: 273px;
+	float: left;
+	display: block;
+	padding: 10px 30px;
+	background-image: url(../images/bg.jpg);
+}
+
+.ARight h2{
+	text-align: center;
+	padding:10px 0 20px 0;
+}
+
+.case{
+	margin-top: 70px;
+}
+.contentT{
+	width: 1004px;
+	padding-top: 50px;
+}
+
+.contentT li{
+	width: 243px;
+	height: 243px;
+	list-style: none;
+	float: left;
+	padding: 4px 4px;
+}
+
+.information{
+	clear: both;
+	width: 1044px;
+	padding-top:70px; 
+}
+
+.contentI{
+	margin-top:50px; 
+	width: 986px;
+	height: 204px;
+	background-image: url(../images/information.jpg);
+	color: black;
+}
+
+.contentI li{
+	margin-left: 216px;
+	margin-top:  38px;
+	width: 234px;
+	float: left;
+}
+
+.adress{
+	padding-top:70px;
+}
+
+#dituContent{
+	width:697px;
+	height:250px;
+	border:#ccc solid 1px;
+	margin: 0 auto;
+	margin-top: 50px; 
+}
+
+#footer{
+	width: 100%;
+	height: 50px;
+	margin-top: 70px;
+	background-color: 	#689041
+}
+
+.foot-nav{
+	width: 600px;
+	margin: 0 auto;
+}
+.foot-nav li{
+	float: left;
+	width: 100px;
+	line-height: 50px;
+}

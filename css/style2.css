@@ -1,0 +1,123 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+@font-face{
+	font-family: "iconfont";
+	src:url("../images/font/iconfont.eot");
+	src:url("../images/font/iconfont.eot") format("embedded-opentype"),
+		url("../images/font/iconfont.woff") format("woff"),
+		url("../images/font/iconfont.ttf") format("truetype"),
+		url("../images/font/iconfont.svg#iconfont") format("svg");
+}
+
+ul{
+	list-style:none;
+}
+
+a:link,a:visited{
+	text-decoration: none;
+	color: #333;
+}
+
+body{
+	font-family: "微软雅黑";
+	color: #14191e;
+	
+}
+
+.main{
+	width: 100%;
+	height: 450px;
+	margin: 30px auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner{
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner-slice{
+	width: 100%;
+	height: 450px;
+	position: absolute;
+	background-repeat: no-repeat;
+	display: none;
+}
+
+.slide-active{
+	display: block; /*当前的显示*/
+}
+
+.slide1{
+	/*上面使用background-repeat，下面要用全写不能使用background*/
+	background-image:url(../images/banner.jpg);
+	height: 450px;
+}
+
+.slide2{
+	background-image:url(../images/banner2.jpg);
+	height: 450px;
+}
+
+.slide3{
+	background-image:url(../images/banner3.jpg);
+	height: 450px;
+}
+
+.button{
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	left: 244px; 
+	top: 50%;
+	margin-top: -40px;
+	background: url(../images/arrow.png) no-repeat center center;
+}
+
+.button:hover{
+	/*鼠标滑过的时候，只改变背景颜色，在背景颜色上再显示出背景图片，不能使用background，而要用backg-color*/
+	background-color: #333;
+	opacity: 0.6;
+	filter: alpha(opacity=60)
+
+}
+
+.prev{
+	transform: rotate(180deg);/*左边button旋转180度*/
+}
+
+.next{
+	left: auto; /*right和前面left同时出现，left先起作用,需设为auto*/
+	right: 0;
+}
+
+.dots{
+	position: relative;
+	right: 50px;
+	bottom: 34px;
+	text-align: right;
+}
+
+.dots span{
+	display: inline-block; /*水平方向排列*/
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	border-radius: 50%; /*span设置为圆点*/
+	background: rgba(7,17,27,0.4);/*rgba可以设置半透明度*/
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.8);/*圆点白色描边*/
+	margin-right: 10px;
+	cursor: pointer;/*改变光标成手形*/
+}
+
+.dots span.active{
+	box-shadow: rgba(7,17,27,0.4);
+	background: #fff;
+}
+
